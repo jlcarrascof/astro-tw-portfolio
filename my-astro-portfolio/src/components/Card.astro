@@ -1,0 +1,23 @@
+---
+// Frontmatter: JavaScript logic
+
+const { title, description } = Astro.props;
+
+---
+
+<!-- HTML: Component structure -->
+<div class="card">
+    <h2>{ title }</h2>
+    <p>{ description }</p>
+</div>
+
+<!-- CSS: Component styles -->
+<style>
+    .card {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 0.5rem;
+        background-color: #f9f9f9;
+    }
+</style>

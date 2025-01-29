@@ -5,9 +5,15 @@ import Card from '../components/Card.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const projects = [
+	{ title: "Project 1", description: "Description 1" },
+	{ title: "Project 2", description: "Description 2" },
+];
 ---
 
 <Layout>
-	<Card title="Project 1" description="Description of the project 1" />
-	<Card title="Project 2" description="Description of the project 2" />
+	{projects.map((project) => (
+		<Card title={project.title} description={project.description} />
+	))}
 </Layout>

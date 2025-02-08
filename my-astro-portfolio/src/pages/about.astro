@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const title = 'About Me';
+const description = "Welcome to my portfolio. I'm Javier, a front-end developer.";
+---
+
+<Layout>
+
+    <Header title="My Portfolio" />
+
+    <div class="max-w-2xl mx-auto py-8 px-4">
+        <h1 class="text-3xl font-bold text-gray-900">{title}</h1>
+        <p class="mt-4 text-lg text-gray-700">{description}</p>
+    </div>
+
+    <Footer />
+</Layout>

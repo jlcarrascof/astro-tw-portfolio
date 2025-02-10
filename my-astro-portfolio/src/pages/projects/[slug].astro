@@ -3,8 +3,13 @@ import Layout from '../../layouts/Layout.astro'
 
 export async function getStaticPaths() {
     const projects = [
-    { slug: 'project-1', title: 'Project 1', description: 'Description 1' },
-    { slug: 'project-2', title: 'Project 2', description: 'Description 2' },
-  ]
+        { slug: 'project-1', title: 'Project 1', description: 'Description 1' },
+        { slug: 'project-2', title: 'Project 2', description: 'Description 2' },
+    ]
+
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project },
+    }))
 }
 ---

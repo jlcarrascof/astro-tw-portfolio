@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+    const projects = [
+        { slug: 'project-1', title: 'Project 1', description: 'Description 1' },
+        { slug: 'project-2', title: 'Project 2', description: 'Description 2' },
+    ]
+
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project },
+    }))
+}
+
+const { project } = Astro.props
+---
+
+<!-- HTML: Page Structure -->
+<Layout>
+    <div class="max-w-2xl mx-auto py-8 px-4">
+        <h1 class="text-3xl font-bold text-gray-900">{project.title}</h1>
+        <p class="mt-4 text-lg text-gray-700">{project.description}</p>
+        <a href="/projects" class="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+          Return to projects
+        </a>
+    </div>
+</Layout>

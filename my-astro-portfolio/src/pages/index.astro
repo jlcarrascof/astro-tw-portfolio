@@ -26,6 +26,34 @@ const projects = [
 		</p>
   	</div>
 
+	<!-- Habilidades -->
+	<div class="max-w-4xl mx-auto py-12 px-4">
+		<h2 class="text-2xl font-bold text-gray-900 text-center">My Skills</h2>
+		<div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="bg-white p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold text-gray-900">Desarrollo Web</h3>
+			<p class="mt-2 text-gray-700">
+				Skill 1
+			<!--
+				Creo aplicaciones web modernas y responsive utilizando las últimas tecnologías.
+			-->
+			</p>
+		</div>
+		<div class="bg-white p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold text-gray-900">Diseño UI/UX</h3>
+			<p class="mt-2 text-gray-700">
+			Diseño interfaces intuitivas y atractivas para mejorar la experiencia del usuario.
+			</p>
+		</div>
+		<div class="bg-white p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold text-gray-900">Consultoría</h3>
+			<p class="mt-2 text-gray-700">
+			Ofrezco asesoría personalizada para llevar tus ideas al siguiente nivel.
+			</p>
+		</div>
+		</div>
+	</div>
+
 	{projects.map((project) => (
 		<Card title={project.title} description={project.description} />
 	))}

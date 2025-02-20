@@ -17,6 +17,10 @@ const projects = [
 
         <div class="mt-6 space-y-4">
             {projects.map((project) => (
+                <a
+                    href={`/projects/${project.slug}`}
+                    class="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                ></a>
              ))}
         </div>
     </div>

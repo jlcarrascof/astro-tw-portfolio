@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const projects = [
+	{ slug: 'project-1', title: "Project 1", description: "Description 1" },
+	{ slug: 'project-2', title: "Project 2", description: "Description 2" },
+]
+---
+
+<Layout>
+    <Header title="My Portfolio" />
+
+    <div class="max-w-2xl mx-auto py-8 px-4">
+        <h1 class="text-3xl font-bold text-gray-900">My Projects</h1>
+
+        <div class="mt-6 space-y-4">
+            {projects.map((project) => (
+                <a
+                    href={`/projects/${project.slug}`}
+                    class="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                    <h2 class="text-xl font-bold text-gray-900">{project.title}</h2>
+                    <p class="mt-2 text-gray-600">{project.description}</p>
+                    <span class="mt-2 inline-block text-sm text-blue-600">More details →</span>
+                </a>
+             ))}
+        </div>
+    </div>
+
+    <Footer />
+</Layout>
